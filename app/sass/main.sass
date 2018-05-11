@@ -1,0 +1,209 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+*:-moz-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+*::-moz-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+*:-ms-input-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  background-color: $default-color
+  font-family: $default-font
+
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+
+// custom
+ul
+  padding: 0
+  margin: 0
+  list-style-type: none
+
+.load__more
+  width: 100%
+  height: 50px
+  margin: 50px 0
+  text-align: center
+  font-size: 28px
+  position: relative
+  &:after
+    content: ''
+    width: 100%
+    border-bottom: solid 2px #f2f2f2
+    position: absolute
+    left: 0
+    top: 50%
+    z-index: 1
+  a
+    margin: 0 auto
+    text-align: center
+    display: inline-block
+    color: #b6b6b6
+    font-size: 17px
+    font-weight: 400
+    line-height: 30px
+    border: 2px solid #f2f2f2
+    background-color: #ffffff
+    z-index: 3
+    padding: 0px 18px
+    position: relative
+    color: #b6b6b6
+    font-size: 17px
+    font-weight: 400
+    line-height: 30px
+
+.wrapper
+  padding-bottom: 156px
+  .bg
+    height: 400px
+    background-size: cover
+    background: url("../img/featured-post.jpg") center center / cover no-repeat
+  .text__title
+    color: #454545
+    font-size: 30px
+    font-weight: 400
+    line-height: 30px
+    border-bottom: 1px solid $default-color
+    width: 100%
+    padding-bottom: 9px
+    margin-bottom: 9px
+  .text__info
+    color: #b6b6b6
+    font-size: 15px
+    font-weight: 500
+    line-height: 20px
+  .content
+    width: 940px
+    margin: -80px auto 0
+    padding: 40px 80px 60px
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05)
+    background-color: #ffffff
+    header
+      display: flex
+      margin-left: -80px
+      .icon
+        margin: 0 24px
+        width: 32px
+        height: 32px
+        img
+          width: 100%
+          height: 100%
+      .text__wrapper
+        width: calc(100% - 80px)
+    article
+      p
+        text-align: justify
+        color: #454545
+        font-size: 17px
+        font-weight: 400
+        line-height: 25px
+        margin-top: 30px
+        margin-bottom: 30px
+      figure
+        img
+          float: left
+          margin-left: -80px
+          display: inline-block
+          margin-right: 25px
+    footer
+      display: flex
+      justify-content: space-between
+      padding-right: 200px
+      padding-top: 19px
+      padding-bottom: 19px
+      border-bottom: 1px solid $default-color
+      border-top: 1px solid $default-color
+    .comments__wrapper
+      .comments
+        display: block
+        &-all
+          .wrapper
+            display: flex
+            padding: 0
+            + ul
+              padding-left: 40px
+        .avatar
+          margin-right: 27px
+          img
+            border: 2px solid #ebedee
+            background-color: #ffffff
+        .form
+          &__wrapper
+            width: 100%
+          &__title
+            display: flex
+            &-name
+              color: forestgreen
+          &__content
+          &__btn
+        form
+            display: flex
+            flex-direction: column
+            textarea
+              height: 86px
+              resize: none
+              padding: 15px
+              border: 2px solid #ebedee
+              background-color: #ffffff
+            button
+              padding: 6px 50px
+              align-self: flex-end
+              background-color: #f1c40f
+              border: none
+              border-radius: 5px
+              margin-top: 10px
+              margin-bottom: 10px
+        &-new
+          border-bottom: 2px solid #f2f2f2
+
+@import "media"
